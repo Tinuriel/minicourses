@@ -38,21 +38,21 @@ Claude ищет и читает 20–40 хороших источников, в�
 
 Каждая страница — самодостаточный HTML-файл: работает с диска, на GitHub Pages, Netlify, Render, Cloudflare Pages или как страница claude.ai.
 
-## Публикация в этом репозитории
+## Публикация
 
-Папка `docs/` — каталог курсов для GitHub Pages:
+Готовые курсы лучше держать в отдельном репозитории, где лежат только сайты: каталог `index.html` в корне и по папке на курс. Скилл и исследования туда не попадают.
 
 ```bash
-python3 skills/minicourse/scripts/build_site.py minicourse/<slug> --out docs/<slug> --catalog ../
+python3 ~/.claude/skills/minicourse/scripts/build_site.py minicourse/<slug> --out <сайт-репозиторий>/<slug> --catalog ../
 ```
 
 ```bash
-python3 skills/minicourse/scripts/build_catalog.py docs
+python3 ~/.claude/skills/minicourse/scripts/build_catalog.py <сайт-репозиторий>
 ```
 
-После пуша курс будет по адресу `https://tinuriel.github.io/minicourses/<slug>/`. GitHub Pages включается один раз: Settings → Pages → Deploy from a branch → ветка `main`, папка `/docs`.
+В репозитории с сайтами GitHub Pages включается один раз: Settings → Pages → Deploy from a branch → `main`, папка `/ (root)`. Курс будет по адресу `https://<аккаунт>.github.io/<репозиторий>/<slug>/`.
 
-Рабочие папки курсов (`minicourse/`) и скачанные страницы (`raw/`) в репозиторий не попадают: это чужие тексты для внутреннего пользования.
+Рабочие папки курсов (`minicourse/`) и скачанные страницы (`raw/`) в git не попадают: это чужие тексты для внутреннего пользования.
 
 ## Установка
 

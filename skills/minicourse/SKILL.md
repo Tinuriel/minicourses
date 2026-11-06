@@ -142,12 +142,12 @@ site/              готовый сайт
 
 Сайт — обычная папка со статическими HTML-файлами, без сервера и внешних зависимостей. Варианты, по удобству:
 
-1. **Репозиторий-каталог курсов на GitHub Pages** (как `Tinuriel/minicourses`): если в текущем репозитории есть папка `docs/` с каталогом курсов, соберите курс туда и обновите каталог:
+1. **Отдельный репозиторий с сайтами курсов на GitHub Pages.** В нём лежат только готовые сайты: каталог `index.html` в корне и по папке на курс. Ни скилла, ни `raw/`, ни рабочих файлов. Спросите у пользователя путь к локальной копии этого репозитория (дальше `<site-repo>`), если он ещё не назван, и соберите туда курс и каталог:
    ```
-   python3 <skill>/scripts/build_site.py <workspace> --out <repo>/docs/<slug> --catalog ../
-   python3 <skill>/scripts/build_catalog.py <repo>/docs
+   python3 <skill>/scripts/build_site.py <workspace> --out <site-repo>/<slug> --catalog ../
+   python3 <skill>/scripts/build_catalog.py <site-repo>
    ```
-   Закоммитьте только `docs/` (не `raw/`!) и запушьте. Адрес: `https://<owner>.github.io/<repo>/<slug>/`. GitHub Pages включается один раз в настройках репозитория: Settings → Pages → Deploy from a branch → ветка, папка `/docs`.
+   Закоммитьте и запушьте изменения в `<site-repo>`. Адрес курса: `https://<owner>.github.io/<repo>/<slug>/`, а если репозиторий называется `<owner>.github.io`, то `https://<owner>.github.io/<slug>/`. GitHub Pages включается в репозитории один раз: Settings → Pages → Deploy from a branch → `main`, папка `/ (root)`.
 2. **Страница claude.ai (Artifact)**, если инструмент доступен: `index.html` как страница, остальные `.html` из `site/` через `files`. Ссылка приватная, пока пользователь не решит ею поделиться.
 3. **Любой статический хостинг**: Netlify Drop (перетащить папку `site/`), Cloudflare Pages, Render. Если у курса будет постоянный адрес, впишите его в `course.json → site_url` и пересоберите (для canonical и превью ссылок).
 
