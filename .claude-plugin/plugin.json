@@ -1,0 +1,13 @@
+{
+  "name": "minicourse",
+  "displayName": "Мини-курс",
+  "version": "1.0.0",
+  "description": "Turns any topic into a researched text mini-course with cited sources and its own website: a pilot lesson first, the rest once you like it.",
+  "author": {
+    "name": "Tinuriel"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/Tinuriel/minicourses",
+  "homepage": "https://github.com/Tinuriel/minicourses",
+  "keywords": ["course-generator", "learning", "microlearning", "static-site", "russian"]
+}

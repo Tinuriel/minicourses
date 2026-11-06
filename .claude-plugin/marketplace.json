@@ -1,0 +1,14 @@
+{
+  "name": "minicourses",
+  "owner": {
+    "name": "Tinuriel"
+  },
+  "description": "Мини-курсы: тема → исследованный текстовый курс с источниками и сайтом.",
+  "plugins": [
+    {
+      "name": "minicourse",
+      "source": "./",
+      "description": "Turns any topic into a researched text mini-course with its own website."
+    }
+  ]
+}

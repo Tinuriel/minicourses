@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+# Research workspaces: saved pages are for private study, never publish them.
+minicourse/
+**/raw/
+!tests/fixtures/*/raw/
